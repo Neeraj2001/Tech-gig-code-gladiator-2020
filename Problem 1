@@ -1,12 +1,11 @@
 def main():
     n = int(input())
     quantity_puff = list(map(int,input().split()))
-    quantity_lab  = list(map(int,input().split()))
-    l = []
+    quantity_lab = list(map(int,input().split()))
+    min_n = []
     for i in range(0,n):
         data = quantity_lab[i]//quantity_puff[i]
-        l.append(data)    
-    print(min(l))
- # Write code here 
+        min_n.append(data)
+    print(min(min_n))    
 
 main()
