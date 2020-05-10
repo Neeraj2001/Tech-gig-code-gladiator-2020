@@ -1,3 +1,5 @@
+//Python 3
+
 def main():
     n = int(input())
     quantity_puff = list(map(int,input().split()))
