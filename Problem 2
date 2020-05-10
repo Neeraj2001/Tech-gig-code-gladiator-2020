@@ -1,0 +1,36 @@
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+    public static void main(String args[] ) throws Exception {
+    Scanner sc = new Scanner(System.in);
+    int t = sc.nextInt();
+    while(t-->0)
+    {
+    int n = sc.nextInt();
+    int count =0;
+    ArrayList<Integer> arr = new ArrayList<Integer>();
+    ArrayList<Integer> brr = new ArrayList<Integer>();
+    for(int i=0;i<n;i++) arr.add(sc.nextInt());
+    for(int j=0;j<n;j++) brr.add(sc.nextInt());
+   Collections.sort(arr, Collections.reverseOrder());
+Collections.sort(brr, Collections.reverseOrder());
+    int p =0 ;
+    for(int i=0;i<arr.size();i++)
+    {
+      for( int j=p;j<brr.size();j++)
+      {
+         if(arr.get(i) > brr.get(j)) 
+         {
+             p = j+1;
+             count++;
+             break;
+      } } 
+     }
+      System.out.println(arr);
+       System.out.println(brr);
+     //count--;
+    System.out.println(count);
+    }
+   }
+}
